@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #090909;
+    color: #ff3333;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.inicio {
+    max-width: 620px;
+    text-align: center;
+}
+
+.inicio h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.85;
+    font-weight: bold;
+    letter-spacing: -5px;
+    margin-bottom: 25px;
+}
+
+.inicio h2 {
+    font-size: 22px;
+    margin-bottom: 45px;
+}
+
+nav {
+    width: 100%;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 9px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a span:first-child {
+    white-space: nowrap;
+}
+
+nav a span:last-child {
+    margin-left: auto;
+}
+
+nav a span:first-child::after {
+    content: "";
+    display: inline-block;
+    width: 280px;
+    margin-left: 10px;
+    border-bottom: 3px dotted #ff3333;
+    vertical-align: middle;
+}
+
+.flecha {
+    display: block;
+    margin-top: 65px;
+    font-size: 30px;
+}
+
+.seccion {
+    min-height: 100vh;
+    padding: 90px 20px;
+}
+
+.contenido {
+    max-width: 900px;
+}
+
+.numero {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.seccion h2 {
+    text-align: center;
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1;
+    margin-bottom: 70px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.about-image {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+}
+
+.image-placeholder {
+    width: 100%;
+    min-height: 180px;
+    border: 1px solid #ff3333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.about-text {
+    font-size: 18px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+.about-text strong {
+    font-size: 25px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.servicio {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #ff3333;
+}
+
+.servicio i {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.servicio h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.servicio p {
+    font-size: 16px;
+}
+
+.descripcion-seccion {
+    text-align: center;
+
+    max-width: 600px;
+
+    margin: -35px auto 60px;
+
+    font-size: 18px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 30px;
+}
+
+.proyecto {
+    margin: 0;
+}
+
+.proyecto .image-placeholder {
+    min-height: 260px;
+    transition: 0.3s;
+}
+
+.proyecto:hover .image-placeholder {
+    background-color: #ff3333;
+
+    color: #090909;
+}
+
+.proyecto figcaption {
+    padding-top: 12px;
+}
+
+.proyecto h3 {
+    font-size: 19px;
+}
+
+.proyecto p {
+    font-size: 15px;
+}
+
+.proyecto img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    display: block;
+}
+
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contacto-info h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contacto-info p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.redes a {
+    font-size: 28px;
+}
+
+.formulario {
+    width: 100%;
+}
+
+.campo {
+    margin-bottom: 25px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ff3333;
+    color: #ff3333;
+    padding: 8px;
+    font-family: inherit;
+    outline: none;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    background: transparent;
+    border: 2px solid #ff3333;
+    color: #ff3333;
+    padding: 10px 30px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #ff3333;
+    color: #090909;
+}
+
+footer {
+    border-top: 1px solid #ff3333;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 40px 20px;
+    }
+
+    .inicio h1 {
+        letter-spacing: -3px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    nav a span:first-child::after {
+        width: 100px;
+    }
+
+    .seccion {
+        padding: 70px 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 200px;
+        margin: auto;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio h1 {
+        font-size: 52px;
+    }
+
+    .inicio h2 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    nav a span:first-child::after {
+        width: 50px;
+    }
+
+    .seccion h2 {
+        font-size: 40px;
+    }
+}
